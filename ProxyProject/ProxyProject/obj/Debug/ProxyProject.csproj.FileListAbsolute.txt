@@ -1,0 +1,11 @@
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\bin\Debug\ProxyProject.exe.config
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\bin\Debug\ProxyProject.exe
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\bin\Debug\ProxyProject.pdb
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\bin\Debug\NSubstitute.dll
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\bin\Debug\NSubstituteAutoMocker.dll
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\bin\Debug\nunit.framework.dll
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\bin\Debug\NSubstitute.xml
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\bin\Debug\nunit.framework.xml
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\obj\Debug\ProxyProject.csprojResolveAssemblyReference.cache
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\obj\Debug\ProxyProject.exe
+c:\users\oksana\documents\visual studio 2015\Projects\ProxyProject\ProxyProject\obj\Debug\ProxyProject.pdb
