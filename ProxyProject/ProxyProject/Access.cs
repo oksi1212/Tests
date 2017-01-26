@@ -6,7 +6,7 @@ namespace ProxyProject
 {
     public class Access : Rules
     {
-      private bool AccessSubject(Packet packet)
+        public  bool AccessSubject(Packet packet)
       {
         bool flag = true;
         string[] access = File.ReadAllLines("AccessSubject.txt");

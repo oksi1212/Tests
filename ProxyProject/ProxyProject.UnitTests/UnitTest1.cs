@@ -18,34 +18,25 @@ namespace ProxyProject.UnitTests
             ProxyProject.Authentification.AddUser(TestCountPassword);
         }
         [Test]
-        public void TestGetPassword()
-        {
-            string test = "쮸㵫曨ﷲ\u171f澙Ǯ쓎詴";
-            Assert.AreEqual(ProxyProject.Authentification.GetPassword(TestCountPassword), test);
-            Assert.AreNotEqual(ProxyProject.Authentification.GetPassword(TestCountPassword), TestCountPassword);
-        }
-        [Test]
         public void TestUserCheck()
         {
             ProxyProject.User user = new ProxyProject.User(25);
             Assert.IsTrue(ProxyProject.Authentification.UserCheck(user));
-            ProxyProject.User user1 = new ProxyProject.User(51);
-            Assert.IsTrue(ProxyProject.Authentification.UserCheck(user1));
         }
         [Test]
         public void TestClientAuthentification()
         {
+            int TestCountPassword = 50;
+            ProxyProject.Authentification.AddUser(TestCountPassword);
             ProxyProject.User user = new ProxyProject.User(25);
             Assert.That(() => ProxyProject.Authentification.ClientAuthentification(user), Throws.Nothing);
-            ProxyProject.User user1 = new ProxyProject.User(51);
-            ProxyProject.Authentification.ClientAuthentification(user1);
         }
-      }
+    }
 
     public class TestCorrecherss
     {
-        ProxyProject.Rules rl1;
-        ProxyProject.Packet request;
+        public ProxyProject.Rules rl1;
+        public  ProxyProject.Packet request;
         [SetUp]
         public void BeforeTest()
         {
@@ -61,12 +52,12 @@ namespace ProxyProject.UnitTests
 
     public class TestAccess
     {
-        ProxyProject.Rules rl1;
-        ProxyProject.Packet request;
+        public ProxyProject.Rules rl1;
+        public ProxyProject.Packet request;
         [SetUp]
         public void BeforeTest()
         {
-            rl1 = new ProxyProject.Access();
+            rl1 = new ProxyProject.Correcherss();
             request = ProxyProject.Packet.GetPacket();
         }
         [Test]
@@ -76,16 +67,16 @@ namespace ProxyProject.UnitTests
             request.Time = 14;
             Assert.That(() => rl1.Rule(request), Throws.Nothing);
         }
-     }
+    }
 
     public class TestAnswer
     {
-        ProxyProject.Rules rl1;
-        ProxyProject.Packet request;
+        public ProxyProject.Rules rl1;
+        public ProxyProject.Packet request;
         [SetUp]
         public void BeforeTest()
         {
-            rl1 = new ProxyProject.Answer();
+            rl1 = new ProxyProject.Correcherss();
             request = ProxyProject.Packet.GetPacket();
         }
         [Test]
@@ -99,17 +90,16 @@ namespace ProxyProject.UnitTests
 
     public class TestProxyServ
     {
-        ProxyProject.ProxyServ proxy;
-        ProxyProject.Packet request;
         [SetUp]
         public void BeforeTest()
         {
-            ProxyProject.ProxyServ proxy = new ProxyProject.ProxyServ(new ProxyProject.RealSubject());
-            request = ProxyProject.Packet.GetPacket();
+            
         }
         [Test]
         public void Prepare()
         {
+            ProxyProject.ProxyServ proxy = new ProxyProject.ProxyServ(new ProxyProject.RealSubject());
+            ProxyProject.Packet request = ProxyProject.Packet.GetPacket();
             request.Sourse = 1;
             request.Destination = 12;
             Assert.That(() => proxy.Prepare(request), Throws.Nothing);
@@ -120,22 +110,21 @@ namespace ProxyProject.UnitTests
     {
         public ProxyProject.ProxyServ proxy;
         public ProxyProject.User user;
-        int TestCountPassword;
-        ProxyProject.Packet request;
         [SetUp]
-        public void BeforeTest()
+        public void ProductionPrepare()
         {
             proxy = new ProxyProject.ProxyServ(new ProxyProject.RealSubject());
-            TestCountPassword = 50;
-            ProxyProject.Authentification.AddUser(TestCountPassword);
+            int possibleCountPassword = 50;
+            ProxyProject.Authentification.AddUser(possibleCountPassword);
             user = new ProxyProject.User(30);
-            request = ProxyProject.Packet.GetPacket();
         }
         [Test]
-        public void TestProduction()
+        public void ProductionTest()
         {
+            
             Assert.IsNotNull(proxy);
             Assert.IsNotNull(user);
+            ProxyProject.Packet request = ProxyProject.Packet.GetPacket();
             Assert.IsNotNull(request);
             Assert.That(() => ProxyProject.Authentification.ClientAuthentification(user), Throws.Nothing);
             Assert.That(() => proxy.Prepare(request), Throws.Nothing);

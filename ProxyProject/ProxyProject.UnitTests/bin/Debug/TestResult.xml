@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\oksana\Documents\Visual Studio 2015\Projects\ProxyProject\ProxyProject.UnitTests\bin\Debug\ProxyProject.UnitTests.dll" total="7" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2017-01-26" time="22:23:24">
+  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.8745" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\oksana\Documents\Visual Studio 2015\Projects\ProxyProject\ProxyProject.UnitTests\bin\Debug" machine-name="DESKTOP-JGHSP4K" user="oksana" user-domain="DESKTOP-JGHSP4K" />
+  <culture-info current-culture="ru-RU" current-uiculture="ru-RU" />
+  <test-suite type="Assembly" name="C:\Users\oksana\Documents\Visual Studio 2015\Projects\ProxyProject\ProxyProject.UnitTests\bin\Debug\ProxyProject.UnitTests.dll" executed="True" result="Success" success="True" time="0.239" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="ProxyProject" executed="True" result="Success" success="True" time="0.230" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="UnitTests" executed="True" result="Success" success="True" time="0.225" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="TestAccess" executed="True" result="Success" success="True" time="0.041" asserts="0">
+                <results>
+                  <test-case name="ProxyProject.UnitTests.TestAccess.TestRule" executed="True" result="Success" success="True" time="0.035" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="TestAnswer" executed="True" result="Success" success="True" time="0.008" asserts="0">
+                <results>
+                  <test-case name="ProxyProject.UnitTests.TestAnswer.TestRule" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="TestAuthentification" executed="True" result="Success" success="True" time="0.032" asserts="0">
+                <results>
+                  <test-case name="ProxyProject.UnitTests.TestAuthentification.TestClientAuthentification" executed="True" result="Success" success="True" time="0.014" asserts="0" />
+                  <test-case name="ProxyProject.UnitTests.TestAuthentification.TestUserCheck" executed="True" result="Success" success="True" time="0.006" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="TestCorrecherss" executed="True" result="Success" success="True" time="0.009" asserts="0">
+                <results>
+                  <test-case name="ProxyProject.UnitTests.TestCorrecherss.TestRule" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="TestProxyServ" executed="True" result="Success" success="True" time="0.024" asserts="0">
+                <results>
+                  <test-case name="ProxyProject.UnitTests.TestProxyServ.Prepare" executed="True" result="Success" success="True" time="0.011" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="TestSystem" executed="True" result="Success" success="True" time="0.082" asserts="0">
+                <results>
+                  <test-case name="ProxyProject.UnitTests.TestSystem.ProductionTest" executed="True" result="Success" success="True" time="0.077" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
