@@ -6,3 +6,6 @@ install:
 script:
   - xbuild /p:Configuration=Debug ProxyProject.sln
   - mono ./testrunner/NUnit.Runners.3.6.0/tools/nunit-console.exe ProxyProject.UnitTests/bin/Debug/ProxyProject.UnitTests.dll
+  "group": "stable",
+  "dist": "precise",
+  "os": "windows"
