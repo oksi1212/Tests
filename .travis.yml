@@ -1,0 +1,8 @@
+language: csharp
+solution: ProxyProject.sln
+install:
+  - nuget restore ProxyProject.sln
+  - nuget install NUnit.Runners -Version 3.6.0 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Debug ProxyProject.sln
+  - mono ./testrunner/NUnit.Runners.3.6.0/tools/nunit-console.exe ProxyProject.UnitTests/bin/Debug/ProxyProject.UnitTests.dll
